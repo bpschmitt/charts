@@ -13,6 +13,8 @@ spec:
   ports:
   - name: broker
     port: {{ .Values.headless.port }}
+  - name: prometheus
+    port: {{ .Values.prometheus.port }}
 {{- if .Values.headless.targetPort }}
     targetPort: {{ .Values.headless.targetPort }}
 {{- end }}
